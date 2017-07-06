@@ -68,3 +68,32 @@ int main()
   }
   printf("Byte between a and b is =%d\n",result);
 }
+
+5 C Program to Swap the ith and jth Bits for a 32-Bit Integer 
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+  int n=18, i=3,j=0;
+  int temp=n;
+  temp |=temp>>j & 1;
+  n|=n>>i & 1;
+  n |=temp>>j &1 ;
+  printf("%d\n",n);
+}
+
+6 C Program to Swap two Integers without using Temporary Variables and Bitwise Operations
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+  int a=5,b=4;
+  a=a+b;
+  b=a-b;
+  a=a-b;
+  printf("%d %d \n",a,b);
+}
+  
+  
