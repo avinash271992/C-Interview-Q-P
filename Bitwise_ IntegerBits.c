@@ -43,10 +43,28 @@ int main()
   int n=16,count=0,i=0;
   for(i=0;i<32;i++)
   {
-    if(n>>i|0 ==1)
+    if(n>>i|0 ==1) //if(n>>i & 1 ==1)
       count=i;
   }
   printf("last bit %d\n",count );
 }
   
-      
+
+4. C Program takes Byte as Input and returns all the Bits between given Positions 
+
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+  int n =78,result =0,i,j;
+  int a=3,b=6,c=0;
+  printf("enter the bit postion between you need to take data \n");
+  //scanf("%d,%d",&a,&b);
+  for(i=a,j=0;i<=b;i++,j++)                                           
+  {
+    c= n>>i & 1;
+     c=c<<j;
+    result+=c;
+  }
+  printf("Byte between a and b is =%d\n",result);
+}
