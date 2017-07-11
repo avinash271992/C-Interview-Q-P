@@ -97,3 +97,68 @@ int main()
 }
   
   
+
+#7 Count Total Set Bits in All Numbers From 1 to N
+
+#include<stdio.h>
+int count;
+void countsetbit(int n)
+{
+  int i;
+  for(i=0;i<32;i++)
+  {
+    if(n & 1<<i)
+      count++;
+  }
+}
+
+int main()
+{
+  int n=6;
+  while(n)
+  {
+    countsetbit(n);
+    n=n-1;
+  }
+  printf("Number of set bit %d\n",count);
+}
+
+#8 Smallest of three integers without comparison operators
+#include<stdio.h>
+ 
+int smallest(int x, int y, int z)
+{
+  int c = 0;
+  while ( x && y && z )
+  {
+      x--;  y--; z--; c++;
+  }
+  return c;
+}
+ 
+int main()
+{
+   int x = 12, y = 15, z = 5;
+   printf("Minimum of 3 numbers is %d", smallest(x, y, z));
+   return 0;
+}
+
+#9 Find whether a given number is a power of 4 or not
+#include<stdio.h>
+int poweroffour(int n)
+{
+  if((n&1)||(n&1<<1))
+    return 0;
+  return 1;
+}
+
+int main ()
+{
+  int n =40;
+  if(poweroffour(n))
+  printf("%d is power of four \n",n);
+  else
+    printf("%d not power of four \n");
+  
+}
+  
