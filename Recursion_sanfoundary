@@ -1,0 +1,94 @@
+# C-Interview-Q-P
+1. C Program to find the Nth Fibonacci Number using Recursion
+#include<stdio.h>
+ int recursion_fibonacci(int, int ,int);
+int main()
+{
+ int j=0,i=1;
+int n=1; 
+//printf("enter the value of n \n");
+//scanf("%d",&n);
+printf("%d th fibonacci number is %d\n",n,recursion_fibonacci(n,j,i));
+}
+ int recursion_fibonacci(int n, int j,int i)
+{
+static int count=1,sum=0;
+if(n==0)
+return 0;
+if(n==1)
+return 1;
+if(count==n)
+return sum;
+else
+{
+count++;
+sum=j+i;
+j=i;
+i=sum;
+printf("%d %d\n",j,i);
+recursion_fibonacci(n,j,i);
+}
+}
+
+2. C Program to find the Biggest Number in an Array of Numbers using Recursion
+#include<stdio.h>
+int biggest_array(int *,int )
+int main()
+{
+int a[20],size,i;
+printf("enter the size of array\n");
+scanf("%d",&n);
+for(i=0;i<size;i++)
+a[i] = rand() % size;
+
+printf("Biggest number is %d \n",biggest_array(a,size));
+}
+int biggest_array(int *a,int size)
+{
+static int max=a[i],i=0;
+if(size==1)
+return max;
+if(size>=0)
+{
+if(max<a[++i])
+{
+max=a[++i];
+biggest_arrray(a,size-1);
+}
+else
+{
+++i;
+biggest_arrray(a,size-1);
+}
+}
+return max;
+}
+
+3. C Program to find Sum of Digits of a Number using Recursion
+#include<stdio.h>
+ int recursion_sum(int n)
+{
+static int sum=0;
+if(n>0)
+{
+sum=sum+n%10;
+recursion_sum(n/10);
+}
+else
+return sum;
+}
+int main()
+{
+int n = 23;
+//printf("enter the digit \n");
+//scanf("%d",&n);
+printf("sum of the digit %d\n",recursion_sum(n));
+}
+
+
+
+
+
+
+
+
