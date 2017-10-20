@@ -85,6 +85,39 @@ int n = 23;
 printf("sum of the digit %d\n",recursion_sum(n));
 }
 
+4. C Program to find GCD of given Numbers using Recursion
+#include<stdio.h>
+int recursion_gcd(int num,int den,int rem)
+{
+if(rem ==0)
+return den;
+else
+{
+den=num;
+num=rem;
+rem=num%den;
+recursion_gcd(num,den,rem);
+}
+}
+int main()
+{
+int n1,n2,num,den,rem;
+printf("enter the value of den and num\");
+scanf("%d%d",&n1,&n2);
+if(n1>n2)
+{
+num=n1;
+den=n2;
+}
+else
+{
+num=n2;
+den=n1;
+}
+rem=num%den;
+printf("GCD IS %d\n",recursion_gcd(num,den,rem));
+}
+
 
 
 
