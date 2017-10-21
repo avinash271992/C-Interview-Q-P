@@ -118,9 +118,100 @@ rem=num%den;
 printf("GCD IS %d\n",recursion_gcd(num,den,rem));
 }
 
+ * C Program to find GCD of given Numbers using Recursion
 
+ */
 
-
+#include <stdio.h>
+int gcd(int, int);
+int main()
+{
+    int a, b, result;
+    printf("Enter the two numbers to find their GCD: ");
+    scanf("%d%d", &a, &b);
+    result = gcd(a, b);
+    printf("The GCD of %d and %d is %d.\n", a, b, result);
+}
+int gcd(int a, int b)
+{
+    while (a != b)
+    {
+        if (a > b)
+        {
+            return gcd(a - b, b);
+        }
+        else
+        {
+            return gcd(a, b - a);
+        }
+    }
+    return a;
+}}
+ 
+ 
+ C Program to Copy One String to Another using Recursion
+ 
+ Q. C Program to Implement two Stacks using a Single Array & Check for Overflow & Underflow
+ #include<stdio.h>
+ #define size 10
+ #define top1 -1
+ #define top2 size
+ #define a[size]
+ push_stack1(int data)
+ {
+ if(top1<top2-1)
+ {
+ ++top1;
+ a[top1]=data;
+ }
+ else
+ {
+ printf("stack full\n");
+ }
+ }
+ 
+ push_stack2(int data)
+ {
+ if(top1<top2-1)
+ {
+ --top2;
+ a[top2]=data;
+ }
+ else
+ {
+ printf("stack  is full\n");
+ }
+ }
+ 
+ 
+ print_stack1()
+ {
+ int i=0;
+ 
+ for(i=top1;i>=0;i--)
+ printf(" %d ",a[i]);
+ }
+ print_stack2()
+ {
+ int i;
+ for(i=top2;i>=0;i--)
+ printf("%d ",a[i]);
+ }
+ 
+ main()
+ {
+ int i;
+ for(i=1;i<=6;i++)
+ push_stack(i);
+ print_stack1();
+ for(i=0;i<4;i++)
+ push_stack2();
+ print_stack2();
+ }
+ 
+ 
+ 
+ 
 
 
 
