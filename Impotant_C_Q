@@ -1,0 +1,46 @@
+****A pointer to a const value is a (non-const) pointer that points to a constant value.
+
+To declare a pointer to a const value, use the const keyword before the data type:
+
+Wrong way
+const int value = 5; // value is const
+int *ptr = &value; // compile error: cannot convert const int* to int*
+*ptr = 6; // change value to 6
+
+Correct wat to declare pointer to a const variable
+onst int value = 5;
+const int *ptr = &value; // this is okay, ptr is a non-const pointer that is pointing to a "const int"
+*ptr = 6; // not allowed, we can't change a const value
+
+
+****
+Q #10) What is the difference between ++d and d++?
+
+Ans) ‘++d”  is called prefixed increment and the increment will happen first on a variable. ‘d++’ is called
+postfix increment and the increment happens after the value of a variable used for the operations.
+
+******Q #14) Describe the header file and its usage in C programming?
+
+Ans) The file contains the definitions and prototypes of the functions being used in the program are called a 
+header file. It is also known as a library file.
+
+Example– The header file contains commands like printf and scanf is the stdio.h.
+
+
+****
+Q #23) What is the method to save data in stack data structure type?
+
+Ans) Data is stored in Stack data structure type using First in Last out (FILO) mechanism.
+Only top of the stack is accessible at a given instance. Storing mechanism is referred as a PUSH and retrieve is referred 
+as a POP.
+********
+Q #30) Describe the modifier in C?
+
+Ans) Modifier is a prefix to the basic data type which is used to indicate the modification for
+storage space allocation to a variable.
+
+Example– In 32-bit processor storage space for int data type is 4.When we use it with modifier the storage 
+space change as follows.
+
+Long int -> Storage space is 8 bit
+Short int -> Storage space is 2 bit
